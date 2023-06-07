@@ -7,7 +7,7 @@ const HistoryCard = ({ reports, i }) => {
 
   console.log(reports);
   return (
-    <div className="border border-accent3 bg-primaryText h-fit flex w-full rounded-xl px-4 py-2 gap-2">
+    <div className="border border-accent3 bg-primaryText h-fit flex w-full rounded-xl px-4 py-2 gap-2 my-5">
       <p className="text-sm font-bold text-accent3">{i + 1 + "."}</p>
       <div className="flex flex-col items-start grow gap-2">
         <div className="flex flex-wrap gap-x-5 gap-y-2">
