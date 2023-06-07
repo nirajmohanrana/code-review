@@ -10,7 +10,7 @@ import {
 import { SiTypescript, SiCplusplus, SiC } from "react-icons/si";
 import { BsFillDiamondFill } from "react-icons/bs";
 
-const FileCard = ({ file, index }) => {
+const HistoryFileCard = ({ file, i }) => {
   const getFileIcon = (extension) => {
     switch (extension) {
       case "py":
@@ -36,7 +36,7 @@ const FileCard = ({ file, index }) => {
     }
   };
 
-  const fileExtension = file.name.split(".").pop(); // Extract the file extension
+  const fileExtension = file.split(".").pop(); // Extract the file extension
 
   const getFileBorderColor = (extension) => {
     switch (extension) {
@@ -66,11 +66,11 @@ const FileCard = ({ file, index }) => {
       className={`tracking-tighter text-sm font-bold border w-fit px-2 py-1 gap-2 flex items-center bg-primaryText rounded-lg`}
       style={{ borderColor: getFileBorderColor(fileExtension) }}
     >
-      <p>{index + 1 + "."}</p>
+      <p>{i + 1 + "."}</p>
       {getFileIcon(fileExtension)}
-      <p>{file.path}</p>
+      <p>{file}</p>
     </li>
   );
 };
 
-export default FileCard;
+export default HistoryFileCard;
